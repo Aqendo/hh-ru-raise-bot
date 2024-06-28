@@ -34,7 +34,12 @@ jobs:
         uses: actions/setup-python@v3
         with:
           python-version: 3.x #install the python needed
-
+      - name: extract edgedriver
+        run: |
+          apt update -y
+          apt install unzip -y
+          wget https://msedgedriver.azureedge.net/126.0.2592.81/edgedriver_linux64.zip -O driver.zip
+          unzip driver.zip
       - name: execute py script # run the run.py to get the latest data
         run: |
           pip install --upgrade pip

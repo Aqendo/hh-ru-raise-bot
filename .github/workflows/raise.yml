@@ -37,7 +37,7 @@ jobs:
       - name: extract chrome
         run: |
           wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -O chrome.deb
-          sudo apt install ./google-chrome-stable_current_amd64.deb -y
+          sudo apt install ./chrome.deb -y
           
       - name: execute py script # run the run.py to get the latest data
         run: |
